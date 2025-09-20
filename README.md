@@ -27,4 +27,19 @@ uv run <file>                    # Запускает файл
 uv run --with <depends> <file>   # Запускает файл c конкретными зависимостями
 uv lock                          # Фиксирует новые зависимости
 uv install --locked              # Устанавливает зафиксированные версии
+
+# --
+
+# Установка базовых зависимостей
+uv install
+
+# Установка зависимостей для разработки
+uv install --group dev
+
+# Установка для staging
+uv install --group staging
+
+# Установка для продакшена
+uv install --group prod
+
 ```
