@@ -7,3 +7,20 @@ requires-python = ">=3.10"
 dependencies = [
     "requests>=2.32.5",
 ]
+
+
+# -- Разделение окружений (dev, staging, prod)
+
+[tool.uv.dependencies]
+python = "^3.12"
+requests = "^2.31"
+
+[tool.uv.group.dev.dependencies]
+pytest = "^8.0"
+flake8 = "^6.0"
+
+[tool.uv.group.staging.dependencies]
+uvicorn = "^0.23"
+
+[tool.uv.group.prod.dependencies]
+gunicorn = "^22.1"
